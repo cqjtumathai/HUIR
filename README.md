@@ -22,7 +22,7 @@ The overview of HUIR:
 ![overview](image_static/fig3.png)
 
 ## Datasets
-We evaluate HUIR on three public multimodal recommendation datasets: Baby, Sports, and Clothing.
+We evaluate HUIR on three public multimodal recommendation datasets: flickr, ciao, and douban.
 
 The processed datasets and pre-extracted multimodal features can be downloaded from:
 - [Baby/Sports/Clothing](https://drive.google.com/drive/folders/1tU4IxYbLXMkp_DbIOPGvCry16uPvolLk)
@@ -30,16 +30,16 @@ Please place the downloaded datasets under the `data/` directory:
 
 ```text
 data/
-├── baby/
-├── sports/
-└── clothing/
+├── flickr/
+├── ciao/
+└── douban/
 ```
 
-| Dataset | # Users | # Items | # Interactions | Sparsity | Modality |
+| Dataset | # Users | # Items | # Interactions | # Social Links | Rating Density |
 |:--|--:|--:|--:|--:|:--|
-| Baby | 19,445 | 7,050 | 160,792 | 99.88% | Visual, Textual |
-| Sports | 35,598 | 18,357 | 296,337 | 99.95% | Visual, Textual |
-| Clothing | 39,387 | 23,033 | 278,677 | 99.97% | Visual, Textual |
+| flickr | 8,358 | 82,120 | 327,815 | 352,952 | 0.048% |
+| ciao | 1,925 | 15,053 | 33,175 | 65,084 | 0.114% |
+| douban | 2,848 | 39,586 | 894,887 | 35,770 | 0.794% |
 
 Following previous multimodal recommendation studies, we use publicly released pre-extracted multimodal features:
 
