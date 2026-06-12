@@ -11,16 +11,6 @@ tqdm = 4.67.1
 scikit-learn = 1.4.0
 ```
 
-## 📌 Overview
-The overview of HUIR:
-![overview](image_static/overview.png)
-
-The overview of ISEC:
-![overview](image_static/fig2.png)
-
-The overview of SRPC:
-![overview](image_static/fig3.png)
-
 ## Datasets
 We evaluate HUIR on three public multimodal recommendation datasets: flickr, ciao, and douban.
 
