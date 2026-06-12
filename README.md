@@ -25,7 +25,7 @@ The overview of SRPC:
 We evaluate HUIR on three public multimodal recommendation datasets: flickr, ciao, and douban.
 
 | Dataset | # Users | # Items | # Interactions | # Social Links | Rating Density |
-|:--|--:|--:|--:|--:|:--|
+|-:-|-:-|-:-|-:-|-:-|-:-|
 | flickr | 8,358 | 82,120 | 327,815 | 352,952 | 0.048% |
 | ciao | 1,925 | 15,053 | 33,175 | 65,084 | 0.114% |
 | douban | 2,848 | 39,586 | 894,887 | 35,770 | 0.794% |
