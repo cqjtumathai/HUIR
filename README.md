@@ -24,43 +24,21 @@ The overview of HUIR:
 ## Datasets
 We evaluate HUIR on three public multimodal recommendation datasets: flickr, ciao, and douban.
 
-The processed datasets and pre-extracted multimodal features can be downloaded from:
-- [Baby/Sports/Clothing](https://drive.google.com/drive/folders/1tU4IxYbLXMkp_DbIOPGvCry16uPvolLk)
-Please place the downloaded datasets under the `data/` directory:
-
-```text
-data/
-├── flickr/
-├── ciao/
-└── douban/
-```
-
 | Dataset | # Users | # Items | # Interactions | # Social Links | Rating Density |
 |:--|--:|--:|--:|--:|:--|
 | flickr | 8,358 | 82,120 | 327,815 | 352,952 | 0.048% |
 | ciao | 1,925 | 15,053 | 33,175 | 65,084 | 0.114% |
 | douban | 2,848 | 39,586 | 894,887 | 35,770 | 0.794% |
 
-Following previous multimodal recommendation studies, we use publicly released pre-extracted multimodal features:
-
-- Visual feature dimension: `4096`
-- Textual feature dimension: `384`
-
 
 ## Training
 
 The recommended hyperparameters for ciao, douban, and flickr are provided in:
 
-```text
-src/configs/model/PA2PD.yaml
-```
-
-Before training, please open `src/configs/model/PA2PD.yaml`, keep only the target dataset configuration active, and comment out the other two dataset configurations.
-
 ### ciao
 
 ```bash
-python main.py --dataset='ciao' --checkpoint='./Model/ciao/_tem_.pth' --model_dir='./Model/ciao/' --lr=0.005 --difflr=0.001 --decay=0.985 --reg=0.01 --noise_min=0.0001 --noise_max=0.1 --SRPCloss=0.05 --ISECloss=1e-3 --bprloss=2 --s_layers=4
+python main.py --dataset='ciao' --checkpoint='./Model/ciao/_tem_.pth' --model_dir='./Model/ciao/' --s_layers=4
 ```
 
 ### douban
@@ -78,4 +56,4 @@ python main.py --dataset='flickr' --checkpoint='./Model/flickr/_tem_.pth' --mode
 
 ## Acknowledgement
 
-This code is developed based on the implementation of [MENTOR](https://github.com/Jinfeng-Xu/MENTOR). We sincerely thank the authors of MENTOR for their excellent work and for making their code publicly available, which provides an important foundation for this project.
+This code is developed based on the implementation of [RecDiff](https://github.com/HKUDS/RecDiff). We sincerely thank the authors of RecDiff for their excellent work and for making their code publicly available, which provides an important foundation for this project.
