@@ -1,17 +1,28 @@
-# PA²PD: Pseudo Adversarial Alignment and Preference Decorrelation Model for Multimodal Recommendation
+# HUIR: Harnessing the Reciprocal Influence of Social Connections and User Interactions for Recommendation
 ## Requirements
 ```text
-python = 3.8.20
-pytorch = 2.1.2
-torch-geometric = 2.6.1
-numpy = 1.24.2
-scipy = 1.10.1
-pandas = 1.5.3
-tqdm = 4.64.1
-scikit-learn = 1.3.2
+python = 3.10.18
+torch = 2.2.0
+torch-geometric = 2.3.1
+numpy = 1.26.4
+scipy = 1.15.3
+pandas = 2.3.0
+tqdm = 4.67.1
+scikit-learn = 1.4.0
 ```
+
+## 📌 Overview
+The overview of HUIR:
+![overview](image_static/overview.png)
+
+The overview of HUIR:
+![overview](image_static/fig2.png)
+
+The overview of HUIR:
+![overview](image_static/fig3.png)
+
 ## Datasets
-We evaluate PA²PD on three public multimodal recommendation datasets: Baby, Sports, and Clothing.
+We evaluate HUIR on three public multimodal recommendation datasets: Baby, Sports, and Clothing.
 
 The processed datasets and pre-extracted multimodal features can be downloaded from:
 - [Baby/Sports/Clothing](https://drive.google.com/drive/folders/1tU4IxYbLXMkp_DbIOPGvCry16uPvolLk)
@@ -38,7 +49,7 @@ Following previous multimodal recommendation studies, we use publicly released p
 
 ## Training
 
-The recommended hyperparameters for Baby, Sports, and Clothing are provided in:
+The recommended hyperparameters for ciao, douban, and flickr are provided in:
 
 ```text
 src/configs/model/PA2PD.yaml
@@ -46,25 +57,23 @@ src/configs/model/PA2PD.yaml
 
 Before training, please open `src/configs/model/PA2PD.yaml`, keep only the target dataset configuration active, and comment out the other two dataset configurations.
 
-### Baby
+### ciao
 
 ```bash
-python main.py -m PA2PD -d baby
+python main.py --dataset='ciao' --checkpoint='./Model/ciao/_tem_.pth' --model_dir='./Model/ciao/' --lr=0.005 --difflr=0.001 --decay=0.985 --reg=0.01 --noise_min=0.0001 --noise_max=0.1 --SRPCloss=0.05 --ISECloss=1e-3 --bprloss=2 --s_layers=4
 ```
 
-### Sports
+### douban
 
 ```bash
-python main.py -m PA2PD -d sports
+python main.py --dataset='douban' --checkpoint='./Model/douban/_tem_.pth' --model_dir='./Model/douban/' --lr=5e-4 --difflr=5e-4 --decay=0.98 --reg=1e-8 --noise_max=0.01 --SRPCloss=0.01 --ISECloss=1e-4 --bprloss=1.5
 ```
 
-### Clothing
+### flickr
 
 ```bash
-python main.py -m PA2PD -d clothing
+python main.py --dataset='flickr' --checkpoint='./Model/flickr/_tem_.pth' --model_dir=  './Model/flickr/' --difflr=5e-4 --noise_min=1e-6 --noise_max=0.05 --SRPCloss=0.5 --ISECloss=5e-3 --bprloss=10
 ```
-
-Please make sure that the dataset specified by `-d` is consistent with the active configuration in `src/configs/model/PA2PD.yaml`.
 
 
 ## Acknowledgement
