@@ -15,10 +15,10 @@ scikit-learn = 1.4.0
 The overview of HUIR:
 ![overview](image_static/overview.png)
 
-The overview of HUIR:
+The overview of ISEC:
 ![overview](image_static/fig2.png)
 
-The overview of HUIR:
+The overview of SRPC:
 ![overview](image_static/fig3.png)
 
 ## Datasets
