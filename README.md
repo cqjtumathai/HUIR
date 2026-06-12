@@ -33,7 +33,7 @@ We evaluate HUIR on three public multimodal recommendation datasets: flickr, cia
 
 ## Training
 
-The recommended hyperparameters for ciao, douban, and flickr are provided in:
+If you want to run the RGCML, you need to create the `History/`+'dataset_name (e.g,ciao)' and the `Models/`+ 'dataset_name (e.g,ciao)' directories.The recommended hyperparameters for ciao, douban, and flickr are provided in:
 
 ### ciao
 
