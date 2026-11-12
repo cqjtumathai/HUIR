@@ -52,7 +52,7 @@ If you find this work useful, please cite our paper:
 ```bibtex
 @article{XIE2026Harnessing,
   title={Harnessing reciprocal influence of social connections and user interactions for recommendation},
-  author={Xie Chang, Yang Mingming, Cao Wenming, Li Man1, Guan Lihe1, Zheng Wei},
+  author={Chang Xie, Mingming Yang, Wenming Cao, Man Li, Lihe Guan, Wei Zheng},
   journal={Application Research of Computers},
   pages={3620-3627},
   year={2026}
