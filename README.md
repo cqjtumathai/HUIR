@@ -47,3 +47,13 @@ python main.py --dataset='flickr' --checkpoint='./Model/flickr/_tem_.pth' --mode
 ## Acknowledgement
 
 This code is developed based on the implementation of [RecDiff](https://github.com/HKUDS/RecDiff). We sincerely thank the authors of RecDiff for their excellent work and for making their code publicly available, which provides an important foundation for this project.
+
+If you find this work useful, please cite our paper:
+```bibtex
+@article{XIE2026Harnessing,
+  title={Harnessing reciprocal influence of social connections and user interactions for recommendation},
+  author={Xie Chang, Yang Mingming, Cao Wenming, Li Man1, Guan Lihe1, Zheng Wei},
+  journal={Application Research of Computers},
+  pages={3620-3627},
+  year={2026}
+}
